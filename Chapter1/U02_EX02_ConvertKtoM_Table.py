@@ -1,4 +1,4 @@
-# U02_S02_ConvertKtoM_Table.py.py
+# U02_EX02_ConvertKtoM_Table.py.py
 #
 #  Author: Grace Ritter
 #  Course: Coding for OOP

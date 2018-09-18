@@ -1,4 +1,4 @@
-# U02_S05_Futival.py.py
+# U02_EX05_Futival.py.py
 #
 #  Author: Grace Ritter
 #  Course: Coding for OOP

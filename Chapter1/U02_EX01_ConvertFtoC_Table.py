@@ -1,4 +1,4 @@
-# U02_S01_ConvertFtoC_Table.py.py
+# U02_EX01_ConvertFtoC_Table.py.py
 #
 #  Author: Grace Ritter
 #  Course: Coding for OOP

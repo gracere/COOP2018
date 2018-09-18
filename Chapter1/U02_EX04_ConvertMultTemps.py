@@ -1,4 +1,4 @@
-# U02_S04_ConvertMultTemps.py.py
+# U02_EX04_ConvertMultTemps.py.py
 #
 #  Author: Grace Ritter
 #  Course: Coding for OOP

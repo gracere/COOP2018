@@ -1,4 +1,4 @@
-# U02_S06_ARPPeroticCompounding.py.py
+# U02_EX06_ARPPeroticCompounding.py.py
 #
 #  Author: Grace Ritter
 #  Course: Coding for OOP
@@ -9,7 +9,7 @@
 # Assignment Info
 #  Exercise:
 #    Source: Python Programming
-#   Chapter:
+#   Chapter: 2
 #
 # Program Description
 #

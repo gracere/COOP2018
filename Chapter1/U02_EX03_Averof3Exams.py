@@ -1,4 +1,4 @@
-# U02_S03_Averof3Exams.py.py
+# U02_EX03_Averof3Exams.py.py
 #
 #  Author: Grace Ritter
 #  Course: Coding for OOP
