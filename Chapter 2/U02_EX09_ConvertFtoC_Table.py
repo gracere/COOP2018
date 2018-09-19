@@ -1,4 +1,4 @@
-# U02_EX01_ConvertFtoC_Table.py.py
+# U02_EX09_ConvertFtoC_Table.py.py
 #
 #  Author: Grace Ritter
 #  Course: Coding for OOP
@@ -7,13 +7,16 @@
 #     IDE: PyCharm
 #
 # Assignment Info
-#  Exercise: Sample 1
+#  Exercise: 9
 #    Source: Python Programming
 #   Chapter: 2
 #
 # Program Description
+#
 #   This program converts temperature from Fahrenheit to Celsius.
+#
 # Algorithm (pseudocode)
+#
 #   Print Program introduction
 #   Get °F from user and assign to Fahrenheit
 #   Calculate °C using (fahrenheit - 32) / 1.8 and assign to Fahrenheit
