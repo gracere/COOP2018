@@ -33,3 +33,6 @@ def main():
     for i in range(x * compound):
         principal = principal * ((1 + apr) / (12 / compound))
         print("The value each successive period is:", principal)
+
+
+main()
