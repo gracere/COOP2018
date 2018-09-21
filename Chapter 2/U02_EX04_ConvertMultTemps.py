@@ -35,7 +35,7 @@ def main():
  y = temp[-1]
 
  for i in range(5):
-    if   y.upper() == "C":
+    if y.upper() == "C":
         result = int(round((9 * degree) / 5 + 32))
         x = "Fahrenheit"
     elif y.upper() == "F":
@@ -44,7 +44,7 @@ def main():
     else:
         print("Input proper convention.")
         quit()
- print("The temperature in", x , "is", result , "degrees. (answer may be rounded)")
+ print("The temperature in", x, "is", result, "degrees. (answer may be rounded)")
 
 
 main()
