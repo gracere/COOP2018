@@ -23,6 +23,7 @@
 #   Calculate new principal (principal = principal * (1 + (apr / periods)))
 # Output value of principal
 #
+'''
 def main():
     years = 10
     print("This program is to to compute the value of an investment, carried 10 years into the future with periods")
@@ -48,5 +49,3 @@ def main():
 
 
 main()
-
-'''
