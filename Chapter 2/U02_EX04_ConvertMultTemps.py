@@ -34,17 +34,17 @@ def main():
  degree = int(temp[:-1])
  y = temp[-1]
 
- if   y.upper() == "C":
-    result = int(round((9 * degree) / 5 + 32))
-    x = "Fahrenheit"
- elif y.upper() == "F":
-    result = int(round((degree - 32) * 5 / 9))
-    x = "Celsius"
- else:
-    print("Input proper convention.")
-    quit()
- print("The temperature in", x , "is", result , "degrees. (answer may be rounded)")
  for i in range(5):
+    if   y.upper() == "C":
+        result = int(round((9 * degree) / 5 + 32))
+        x = "Fahrenheit"
+    elif y.upper() == "F":
+        result = int(round((degree - 32) * 5 / 9))
+        x = "Celsius"
+    else:
+        print("Input proper convention.")
+        quit()
+ print("The temperature in", x , "is", result , "degrees. (answer may be rounded)")
 
 
 main()

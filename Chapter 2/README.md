@@ -5,5 +5,4 @@
 - All others not listed in progress
 ## In progress
 - \<bullet list of files in repository that are in progress\>
-- U02_EX08_APRPeriodicCompounding
-- U02_EX04_ConvertMultTemps
+- U02_EX04_U02_EX04_ConvertMultTemps
