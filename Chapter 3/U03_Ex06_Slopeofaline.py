@@ -21,11 +21,17 @@
 # find the users values
 #
 def main():
-    eval("What are your two x values? Please print x1 then , then your x2 value:")
-    int(x1 , x2)
-    eval("What are your two y values? Please print y1 then , then your y2 value:")
-    int(y1, y2)
-    (x1, y1) = (int)
-    (x2, y2) = (int)
-    slope = ((y2 - y1) / (x2 - x1))
+    variables = [0, 1, 2, 3]
+    variables[0] = input("Please enter a your x1")
+    variables[1] = input("Please enter a your x2")
+    variables[2] = input("Please enter a your y1")
+    variables[3] = input("Please enter a your y2")
+    variables[0] = int(variables[0])
+    variables[1] = int(variables[1])
+    variables[2] = int(variables[2])
+    variables[3] = int(variables[3])
+    slope = ((variables[3] - variables[2]) / (variables[1] - variables[0]))
     print(slope)
+
+
+main()

@@ -17,7 +17,6 @@
 #
 # Algorithm (pseudocode)
 #
-#
 # import the math aprrox of pi, from directory
 # get the imput of the aproxamation
 #
