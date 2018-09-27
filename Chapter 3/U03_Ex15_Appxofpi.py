@@ -20,16 +20,12 @@
 # import the math aprrox of pi, from directory
 # get the imput of the aproxamation
 #
-def main():
-    print("Input the number that you want to have pi approximation.")
-    int("What is the Number?")
-def piApprox(x):
-    pi = 4.0
-    y = 1.0
-    est: = 1.0
-    while 1 < x:
-        y + x = 2
-        est = est - (1/y) + 1 / (y+2)
-        x = x - 1
-        y + x = 2
-    return pi*est
+import math
+pi = 0
+accuracy = 10
+
+for i in range(0, accuracy):
+    pi += ((4.0 * (-1)**i) / (2*i + 1))
+
+    print("The value of pi:"math.pi)
+    print("This is the aproxamation of pi:"pi)
