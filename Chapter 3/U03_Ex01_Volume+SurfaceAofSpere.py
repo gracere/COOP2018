@@ -20,14 +20,18 @@
 # surface area formula
 # get input of the radius
 #
-#
 import math
-
-
 def main():
     print("This program find the surface area, and volume of spheres.")
-    eval("What is the radius of your sphere?") = r
-    surface area = 4 × pi × r
-    print(surface area)
+    r = input("What is the radius of your sphere?")
+    r = int(r)
+    surface = 4 * math.pi * r
+    print("Surface:", surface)
+    volume = (4 / 3) * math.pi * r**3
+    print("Volume:", volume)
+
+
+main()
+
 
 
