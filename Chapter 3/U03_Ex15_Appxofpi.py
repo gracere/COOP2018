@@ -21,11 +21,14 @@
 # get the imput of the aproxamation
 #
 import math
-pi = 0
-accuracy = 10
+def main():
+    pi = 0
+    accuracy = 10
+    for i in range(0, accuracy):
+        pi += ((4.0 * (-1)**i) / (2*i + 1))
+    print("The value of pi:" , math.pi)
+    print("This is the approximation of pi:" , pi)
+    difference = (math.pi - pi)
+    print("This is the difference between the approximation of pi and the actual value of pi:" , difference)
 
-for i in range(0, accuracy):
-    pi += ((4.0 * (-1)**i) / (2*i + 1))
-
-    print("The value of pi:"math.pi)
-    print("This is the aproxamation of pi:"pi)
+main()
