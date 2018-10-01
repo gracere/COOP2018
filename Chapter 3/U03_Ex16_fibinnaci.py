@@ -1,4 +1,4 @@
-# U03_Ex11_sumof1nnumber.py
+# U03_Ex16_fibinnaci.py
 #
 #  Author: Grace Ritter
 #  Course: Coding for OOP
@@ -7,13 +7,13 @@
 #     IDE: PyCharm
 #
 # Assignment Info
-#  Exercise: 11
+#  Exercise: 16
 #    Source: Python Programming
 #   Chapter: 3
 #
 # Program Description
 #
-# find sum of a number
+# finds a number in the fibonacci sequence
 #
 # Algorithm (pseudocode)
 #
@@ -22,11 +22,11 @@
 # print out input
 #
 def main():
-    n=int(input("Enter a number: "))
-    sum1 = 0
-    while(n > 0):
-        sum1=sum1+n
-        n=n-1
-    print("The sum of first n natural numbers is:",sum1)
+    cache = {1:1, 2:1}
+def fib(n, cache):
+    if n not in cache:
+        cache[n] = fib(n-1, cache) + fib(n-2, cache)
+    return cache[n]
+assert([fib(i, cache) for i in range(1,10)] == [1,1,2,3,5,8,13,21,34])
 
 main()
