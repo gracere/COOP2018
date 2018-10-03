@@ -32,7 +32,7 @@ def main():
         if me == "0":
             break
         result = eval(me)
-        print("The expression", me, "is equivilent to", result)
+        print("The expression", me, "is equivalent to", result)
 
 
 main()
