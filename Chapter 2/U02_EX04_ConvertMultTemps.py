@@ -30,43 +30,18 @@
 
 def main():
  print("This program converts multiple temperatures: Fahrenheit to Celsius and vise versa.")
- temp = input("Input the temperature you like to convert? (e.g., 45F, 102C etc.) Please answer with F or C. : ")
- degree = int(temp[:-1])
- y = temp[-1]
-
  for i in range(5):
+    temp = input("Input the temperature you like to convert? (e.g., 45F, 102C etc.) Please answer with F or C. : ")
+    degree = int(temp[:-1])
+    y = temp[-1]
     if y.upper() == "C":
         result = int(round((9 * degree) / 5 + 32))
         x = "Fahrenheit"
+        print("The temperature in", x, "is", result, "degrees. (answer may be rounded)")
     elif y.upper() == "F":
         result = int(round((degree - 32) * 5 / 9))
         x = "Celsius"
-    else:
-        print("Input proper convention.")
-        quit()
- print("The temperature in", x, "is", result, "degrees. (answer may be rounded)")
+        print("The temperature in", x, "is", result, "degrees. (answer may be rounded)")
 
 
 main()
-
-'''
-      if range(5):
-          print("The temperature in", x, "is", result, "degrees. (answer may be rounded)")
-'''
-
-'''
-temp = input("Input the  temperature you like to convert? (e.g., 45F, 102C etc.) : ")
-degree = int(temp[:-1])
-y = temp[-1]
-
-if y.upper() == "C":
-  result = int(round((9 * degree) / 5 + 32))
-  x = "Fahrenheit"
-elif y.upper() == "F":
-  result = int(round((degree - 32) * 5 / 9))
-  x = "Celsius"
-else:
-  print("Input proper convention.")
-  quit()
-print("The temperature in", x , "is", result, "degrees. (answer may be rounded)")
-'''
