@@ -12,20 +12,19 @@
 #   Chapter: 2
 #
 # Program Description
-#   This program converts temperature from Celsius to Fahrenheit.
+#   This program converts temperature from Celsius to Fahrenheit and puts it into a table.
 #
 # Algorithm (pseudocode)
 #   Print Program introduction
-#   Get °C from user and assign to celsius
-#   Calculate °F using 9/5 * °C + 32 and assign to Fahrenheit
-#   Print °F
+#   Print °F and °C in a table
 
 def main():
- print("This program converts temperature to Celsius to Fahrenheit")
- celsius = eval(input("What is the Celsius temperature? "))
- fahrenheit = 9/5 * celsius + 32
- print("The temperature is ", fahrenheit, " degrees Fahrenheit.")
- print (fahrenheit , celsius)
+ print("This program converts temperature to Celsius to Fahrenheit and puts it into a table.")
+ for i in range(101):
+     if i % 10 == 0:
+         celsius = i
+         fahrenheit = 9 / 5 * celsius + 32;
+         print ("Fahrenheit:", fahrenheit ,"| Celsius:", celsius)
 
 
 main()
