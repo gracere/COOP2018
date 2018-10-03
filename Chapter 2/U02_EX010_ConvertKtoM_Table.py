@@ -28,7 +28,7 @@ def main():
  print("This program converts distance from Kilometers to Miles")
  kilometers = eval(input("What is the Kilometer distance? "))
  miles = kilometers * .621371
- print (kilometers , miles)
+ print ("Kilometers:", kilometers , "Miles:", miles)
 
 
 main()
