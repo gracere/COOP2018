@@ -1,4 +1,4 @@
-# U02_EX05_ConvertCtoF_Table.py
+# U02_EX01_ConvertCtoF.py
 #
 #  Author: Grace Ritter
 #  Course: Coding for OOP
@@ -7,7 +7,7 @@
 #     IDE: PyCharm
 #
 # Assignment Info
-#  Exercise: 5
+#  Exercise: 1
 #    Source: Python Programming
 #   Chapter: 2
 #
