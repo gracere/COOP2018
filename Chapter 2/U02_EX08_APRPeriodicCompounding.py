@@ -44,7 +44,7 @@ def main():
     periods = eval(input("Enter the period of time at which the interest is compounded "))
 
     for i in range(years * periods):
-        principal += principal * ((1 + apr) / (12 / periods))
+        principal += principal * ((1 + (apr / periods))
         print("The value each successive period is:", principal)
 
 
