@@ -31,7 +31,7 @@ def main():
     str = float(input("Enter the annualized interest rate: "))
 
     for i in range(10):
-        principal = principal * (1 + str)
+        principal = principal + principal * (1 + str)
 
     print("The value in 10 years is:", principal)
 
