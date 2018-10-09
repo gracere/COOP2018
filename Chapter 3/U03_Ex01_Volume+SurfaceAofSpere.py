@@ -16,9 +16,15 @@
 # This program computes the surface area and volume of a sphere
 #
 # Algorithm (pseudocode)
-#
-# surface area formula
-# get input of the radius
+# import math
+# Print program description/ introduction
+# Get the input of the radius of the sphere from the user
+# surface area formula( 4 * pi * r)
+# input the radius into the surface area equation
+# Then print the surface area
+# Get the input of the radius of the sphere from the user
+# volume formula((4/3) * pi * r**3)) (r to the third power)
+# Then print the Volume
 #
 import math
 def main():
@@ -26,9 +32,9 @@ def main():
     r = input("What is the radius of your sphere?")
     r = int(r)
     surface = 4 * math.pi * r
-    print("Surface:", surface)
+    print("The Surface Area of a sphere with a radius of",  r, "is :" , surface)
     volume = (4 / 3) * math.pi * r**3
-    print("Volume:", volume)
+    print("The Volume of a sphere with a radius of",  r, "is :" , volume)
 
 
 main()
