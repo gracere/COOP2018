@@ -26,10 +26,11 @@
 def main():
     print("This program finds the average of a series of numbers.")
     amount = int("How many numbers do you want to average?: ")
+    total = 0
     for i in range(amount):
-        f = input("Please enter another number that you wish to be averaged:")
-        f = int(f)
-    average = f / amount
+        total = input("Please enter another number that you wish to be averaged:")
+        total = total + total
+    average = total / amount
     print("The average of the numbers that you inputted: ", average)
 
 
