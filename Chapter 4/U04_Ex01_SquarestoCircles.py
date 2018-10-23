@@ -32,10 +32,10 @@ def draw_square(some_turtle):
 
 def draw_art():
     window = turtle.Screen()
-    window.bgcolor('red')
+    window.bgcolor('blue')
     grace = turtle.Turtle()
-    grace.color('yellow')
-    grace.shape('turtle')
+    grace.color('black')
+    grace.shape('arrow')
     grace.speed(2)
 
     for i in range(1, 36):
