@@ -17,11 +17,13 @@
 #
 # Algorithm (pseudocode)
 # Print a program description
-# find the users values for each variable
+# find the users values for each variable( the variables are two sets of x and y points)
 # insert into equation
 # slope of a line = ((y2 - y1) / (x2 - x1))
 # print the slope
 #
+
+
 def main():
     print("This program calculates the slope of a line with the x and y points:")
     x1 = input("Please enter a your x1: ")
@@ -33,6 +35,7 @@ def main():
     y1 = int(y1)
     y2 = int(y2)
     slope = ((y2 - y1) / (x2 - x1))
+    print("(", x1, ",", y1, ") , (", x2,  ",", y2, ")")
     print("The slope of your line is:", slope)
 
 
