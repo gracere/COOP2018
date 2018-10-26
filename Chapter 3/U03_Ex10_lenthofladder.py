@@ -13,18 +13,19 @@
 #
 # Program Description
 #
-# This finds the length of a ladder
+# This program finds the length of a ladder from the data of height, angle of ladder, and the radius
 #
 # Algorithm (pseudocode)
 #
-# find user number
-# input into equation
+# find user variables: ex: need height,and the angle of the ladder in degrees.
+# input into equation: radius = (pi/ 180) * angle of ladder, then length = height/ (sin(radius))
 # print out input
 #
 import math
+
+
 def main():
-
-
+    print("This program calculates the length of a ladder.")
     height = eval(input("Please enter the height of the ladder "))
     deg = eval(input("Please enter the angle of the ladder in degrees "))
     rad = (math.pi/180) * deg
