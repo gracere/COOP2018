@@ -13,20 +13,23 @@
 #
 # Program Description
 #
-# find sum of a number
+# This program finds the sum of a number
 #
 # Algorithm (pseudocode)
-#
-# find user number
-# input into equation
+# print the program description
+# ask user for a number to find the sum of
+# input that user number into first
 # print out input
-#
+
+
 def main():
-    n=int(input("Enter a number: "))
+    print("This program finds the sum of a number.")
+    number = int(input("Enter a number, that you would like the sum of: "))
     sum1 = 0
-    while(n > 0):
-        sum1=sum1+n
-        n=n-1
-    print("The sum of first n natural numbers is:",sum1)
+    while number > 0:
+        sum1 = sum1+number
+        number = number-1
+    print("The sum of first", number,  "natural numbers is:", sum1)
+
 
 main()
