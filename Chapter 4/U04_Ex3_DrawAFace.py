@@ -7,19 +7,18 @@
 #     IDE: PyCharm
 #
 # Assignment Info
-#  Exercise:
+#  Exercise: 3
 #    Source: Python Programming
-#   Chapter:
+#   Chapter: 4
 #
 # Program Description
 #
-#
-#
+# This program draws a face
 #
 # Algorithm (pseudocode)
 # set smilyface to turtle
 # set the colors/details
-# set the variables for directins
+# set the variables for directions
 #
 #
 def draw_smileyface(canvas, center, middle, vradius, hradius,

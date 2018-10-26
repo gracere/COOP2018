@@ -42,7 +42,5 @@ def draw_art():
         draw_square(grace)
         grace.right(10)
 
-    window.exitonclick()
-
 
 draw_art()
