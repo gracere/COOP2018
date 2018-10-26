@@ -13,7 +13,7 @@
 #
 # Program Description
 #
-# find sum of a number but its cubed
+# This program finds the sum of a cubed number.
 #
 # Algorithm (pseudocode)
 #
@@ -21,7 +21,10 @@
 # input into equation
 # print out input
 #
+
+
 def main():
+    print("This program finds the sum of a cubed number.")
     n = int(input("Enter the number :"))
     i, sum = 1, 0
     while (i < n):
@@ -29,5 +32,6 @@ def main():
             sum = sum + i * i
         i += 1
     print("Sum of all odd number is : ", sum)
+
 
 main()
