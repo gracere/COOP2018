@@ -17,9 +17,9 @@
 #
 # Algorithm (pseudocode)
 # print the program description
-# ask user for a number to find the sum of
-# input that user number into first
-# print out input
+# ask user for a number to find the sum of a number
+# input that user number into first the sum of 0, then the sum + number, then number = number - 1
+# print out sum
 
 
 def main():
