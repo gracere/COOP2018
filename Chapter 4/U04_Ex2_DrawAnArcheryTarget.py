@@ -13,98 +13,44 @@
 #
 # Program Description
 #
-# This program draws an archery target
-#
+# This program draws an archery target with a center yellow and with rings of blue, red, black
+# and white. each ring has the same width.
 #
 # Algorithm (pseudocode)
-# import turtle drawing routines
-# import the time routines
-# define a function to draw a target at a location on the screen.
-# draw the largest red circle
-# move to the starting location
-# create an radius
-# set the color
-# set the pen width
-# create a title for the drawing window
-# create a turtle to draw the target with
-# set the location of the center of the target
-# Create an arrow as a turtle shape
-# draw the target
-from turtle import *
-from time import sleep
+# Import graphics
+# Create a GraphWin
+# Create 5 concentric circle of increasing radius( yellow, red, blue, black, white)
+#           each outer ring has a radius greater than previous, in increments
+# Draw circles from outside in
+
+from graphics import *
+
+def main(winSide):
+    win = GraphWin("Target", winSide, winSide)
+    radius = win.getWidth()/12
+    center = Point(win.getWidth()/2, win.getHeight()/2)
+    circles = [makeCircle(center, radius*5, "white"),
+               makeCircle(center, radius*4, "black"),
+               makeCircle(center, radius*3, "blue"),
+               makeCircle(center, radius*2, "red"),
+               makeCircle(center, radius, "yellow")]
+    for circle in circles:
+        circle.draw(win)
 
 
-def draw_target(turtle, targetx, targety):
-    turtle.speed("fast")
-    turtle.up()
-    turtle.goto(targetx, targety + 50)
-    turtle.sety(targety - 150)
-    turtle.down()
-    turtle.color("red")
-    turtle.width(2)
-    turtle.fill(1)
-    turtle.circle(150)
-    turtle.fill(0)
-    turtle.up()
-    turtle.sety(targety - 100)
-    turtle.down()
-    turtle.color("blue")
-    turtle.fill(1)
-    turtle.circle(100)
-    turtle.fill(0)
-    turtle.up()
-    turtle.sety(targety - 50)
-    turtle.down()
-    turtle.color("green")
-    turtle.fill(1)
-    turtle.circle(50)
-    turtle.fill(0)
-    turtle.hideturtle()
-    return
+def makeCircle(c, r, color):
+    """
 
+    Creates a circle object centered at c with a radius r and filled with color
+    Algortith: 1) step one 2) step two;...
+    :param c: Point -> center point of circle
+    :param r: int -> radius of circle
+    :param color: str -> color for fill
+    :return: Circle -> circle object
 
-def erase_target(turtle, targetx, targety):
-    sleep(1)
-    turtle.goto(targetx, targety - 150)
-    turtle.down()
-    turtle.color("white")
-    turtle.width(2)
-    turtle.fill(1)
-    turtle.circle(150)
-    turtle.fill(0)
+    """
 
-
-def move_arrow(arrow, ax, ay, targetx, targety):
-    arrow.goto(ax, ay)
-    arrow.setheading(arrow.towards(targetx, targety))
-    arrow.showturtle()
-    sleep(1)
-    steps = 100
-    dx = (targetx - ax) / float(steps)
-    dy = (targety - ay) / float(steps)
-    for x in range(steps):
-        ax = ax + dx
-        ay = ay + dy
-        arrow.goto(ax, ay)
-
-    return
-setup()
-title("archery target program")
-turtle = Turtle()
-targetx = 0
-targety = 0
-arrow = Turtle()
-arrow.hideturtle()
-arrow.penup()
-register_shape("myarrow", ((-6, -96), (-6, 0), (-18, 0), (0, 18), (18, 0), (6, 0), (6, -96), (-6, -96)))
-arrow.shape("myarrow")
-draw_target(turtle, targetx, targety)
-ax = -200
-ay = 0
-move_arrow(arrow, ax, ay, targetx, targety)
-erase_target(turtle, targetx, targety)
-targetx = 100
-targety = 100
-draw_target(turtle, targetx, targety)
-move_arrow(arrow, ax, ay, targetx, targety)
-done()
+    circ = Circle(c, r)
+    circ.setOutline("black")
+    circ.setFill(color)
+    return circ
