@@ -25,6 +25,7 @@
 
 from graphics import *
 
+
 def main(winSide):
     win = GraphWin("Target", winSide, winSide)
     radius = win.getWidth()/12
@@ -54,6 +55,7 @@ def makeCircle(c, r, color):
     circ.setOutline("black")
     circ.setFill(color)
     return circ
+
 
 if __name__ == '__main__':
     main(600)
