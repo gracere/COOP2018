@@ -16,17 +16,32 @@
 # finds a number in the fibonacci sequence
 #
 # Algorithm (pseudocode)
-#
+# Print program description
 # find user number
 # input into equation
 # print out input
 #
+
+
+def Fibonacci(n):
+    if n < 0:
+        print("Incorrect input")
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        return Fibonacci(n - 1) + Fibonacci(n - 2)
+
+
+print(Fibonacci(9))
+
+
 def main():
-    cache = {1:1, 2:1}
-def fib(n, cache):
-    if n not in cache:
-        cache[n] = fib(n-1, cache) + fib(n-2, cache)
-    return cache[n]
-assert([fib(i, cache) for i in range(1,10)] == [1,1,2,3,5,8,13,21,34])
+    print("This program finds the nth number in the Fibonacci Sequence.")
+    n = input("Please type a number that you would wish to find:")
+    Fibonacci(n)
+    print(Fibonacci(n))
+
 
 main()
