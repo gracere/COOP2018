@@ -16,16 +16,15 @@
 # This program finds the sum of a cubed number.
 #
 # Algorithm (pseudocode)
-#
-# find user number
-# input into equation
-# print out input
-#
+# print the program description
+# ask user for a number to find the sum of a number
+# input that user number into first the sum of 0, then the sum + number, then number = number - 1
+# print out sum
 
 
 def main():
     print("This program finds the sum of a cubed number.")
-    n = int(input("Enter the number :"))
+    n = int(input("Enter the number, that you would like the sum of that is cubed:"))
     i, sum = 1, 0
     while (i < n):
         if (i % 2 != 0):
