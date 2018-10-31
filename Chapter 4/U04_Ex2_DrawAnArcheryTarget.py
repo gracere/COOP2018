@@ -54,3 +54,7 @@ def makeCircle(c, r, color):
     circ.setOutline("black")
     circ.setFill(color)
     return circ
+
+
+main(600)
+input("Press <Enter> to close tab.")
