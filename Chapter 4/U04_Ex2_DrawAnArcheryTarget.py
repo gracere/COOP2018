@@ -55,6 +55,6 @@ def makeCircle(c, r, color):
     circ.setFill(color)
     return circ
 
-
-main(600)
-input("Press <Enter> to close tab.")
+if __name__ == '__main__':
+    main(600)
+    input("Press <Enter> to close tab.")
