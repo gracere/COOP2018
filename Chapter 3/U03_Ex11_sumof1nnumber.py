@@ -18,7 +18,7 @@
 # Algorithm (pseudocode)
 # print the program description
 # ask user for a number to find the sum of a number
-# input that user number into first the sum of 0, then the sum + number, then number = number - 1
+# input that user number into sum = sum + number
 # print out sum
 
 
@@ -27,8 +27,8 @@ def main():
     number = int(input("Enter a number, that you would like the sum of: "))
     sum1 = 0
     while number > 0:
-        sum1 = sum1+number
-        number = number-1
+        sum1 = sum1 + number
+        number = number - 1
     print("The sum of first", number,  "natural numbers is:", sum1)
 
 
