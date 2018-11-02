@@ -23,20 +23,17 @@
 # insert distance formula into code
 # print findings
 
+import math
+
 
 def main():
-    x1 = input('Please enter a value for x1')
-    x2 = input('Please enter a value for x2')
-    y1 = input('Please enter a value for y1')
-    y2 = input('Please enter a value for y2')
+    print("This program computes the distance formula of two sets of points.")
+    x1 = input('Please enter a value for x1: ')
+    x2 = input('Please enter a value for x2: ')
+    y1 = input('Please enter a value for y1: ')
+    y2 = input('Please enter a value for y2: ')
     print(x1, x2, y1, y2)
-    xcords = x2 - x1
-    print('Difference of X Co-Ordinates:', xcords)
-    ycords = y2 - y1
-    print('Difference of Y Co-Ordinates:', ycords)
-    sumofx = xcords / 2
-    sumofy = ycords / 2
-    distform = sumofx + sumofy
+    distform = math.sqrt(math.pow(x2 - x1, 2) + math.pow(y2 - y1, 2))
     print("Distance of points:", distform)
 
 
