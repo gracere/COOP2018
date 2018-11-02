@@ -24,12 +24,22 @@
 
 def main():
     print("This program finds the sum of a number.")
-    number = int(input("Enter a number, that you would like the sum of: "))
+    num = int(input("Enter a number: "))
+    if num < 0:
+        print("Enter a positive number")
+    else:
+        sum = 0
+        while (num > 0):
+            num * (num + 1) / 2
+    print("The sum of first", num,  "natural numbers is:", sum)
+
+
+main()
+
+
+""" number = int(input("Enter a number, that you would like the sum of: "))
     sum1 = 0
     while number > 0:
         sum1 = sum1 + number
         number = number - 1
-    print("The sum of first", number,  "natural numbers is:", sum1)
-
-
-main()
+    print("The sum of first", number,  "natural numbers is:", sum1)"""
