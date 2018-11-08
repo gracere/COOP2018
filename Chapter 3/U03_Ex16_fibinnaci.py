@@ -23,25 +23,18 @@
 #
 
 
-def Fibonacci(n):
-    if n < 0:
-        print("Incorrect input")
-    elif n == 1:
-        return 0
-    elif n == 2:
-        return 1
-    else:
-        return Fibonacci(n - 1) + Fibonacci(n - 2)
-
-
-print(Fibonacci(9))
-
-
 def main():
-    print("This program finds the nth number in the Fibonacci Sequence.")
-    n = input("Please type a number that you would wish to find:")
-    Fibonacci(n)
-    print(Fibonacci(n))
+    print("This is a program for the Fibonacci number for a value you input.")
+    n = eval(input("Please insert the value of n:"))
+    if n <= 0:
+        print("Please insert positive integer")
+    for i in range(n):
+        if n == 1:
+            print(1)
+        if n > 1:
+            equation = (n - 1) + (n - 2)
+            print(equation)
+            break
 
 
 main()
