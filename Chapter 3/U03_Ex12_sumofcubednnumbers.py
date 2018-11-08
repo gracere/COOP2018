@@ -23,14 +23,16 @@
 
 
 def main():
-    print("This program finds the sum of a cubed number.")
-    n = int(input("Enter the number, that you would like the sum of that is cubed:"))
-    i, sum = 1, 0
-    while (i < n):
-        if (i % 2 != 0):
-            sum = sum + i * i
-        i += 1
-    print("Sum of all odd number is : ", sum)
+    print("This program sums the values of a number of cubes supplied by the user.")
+    n = eval(input("How many positive integers' cubes would you like to add?"))
+    total = 0
+    for i in range(1, n+1):
+        total = total + i**3
+
+        print(total)
 
 
 main()
+
+
+
