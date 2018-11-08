@@ -32,9 +32,10 @@ def main():
     x2 = input('Please enter a value for x2: ')
     y1 = input('Please enter a value for y1: ')
     y2 = input('Please enter a value for y2: ')
-    print(x1, x2, y1, y2)
-    distform = math.sqrt(math.pow(x2 - x1, 2) + math.pow(y2 - y1, 2))
-    print("Distance of points:", distform)
+    d = math.sqrt(((x2 - x1) ** 2) + ((y2 - y1) ** 2))
+    print(" ")
+    print("The distance between points (" + str(x1) + ",", str(y1) + ") and ("
+          + str(x2) + ",", str(y2) + ") is", round(d, 2))
 
 
 main()
