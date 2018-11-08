@@ -27,56 +27,41 @@ from graphics import *
 
 
 def main():
-
     win = GraphWin("Graphical Future Value Chart", 965, 530)
     win.setBackground("white")
-
     make_rect1(win)
-
     amount_box_text = Text(Point(790, 100), "What is the value of money being compounded?")
     amount_box_text.draw(win)
     amount_box = Entry(Point(790, 120), 20)
     amount_box.setText("0.0")
     amount_box.draw(win)
-
     pr_box_text = Text(Point(790, 140), "What is the percentage rate in percent?")
     pr_box_text.draw(win)
     pr_box = Entry(Point(790, 160), 20)
     pr_box.setText("0.0")
     pr_box.draw(win)
-
     calc_box_text = Text(Point(790, 185), "Click the window to calculate.")
     calc_box_text.draw(win)
-
     make_rect2(win)
-
     win.getMouse()
-
     calc_box_text.undraw()
-
     amount = float(amount_box.getText())
     pr = float(pr_box.getText())
-
     intro_text = Text(Point(480, 505), "This program plots the growth of a 10 year investment.")
     intro_text.setSize(20)
     intro_text.setStyle("bold")
     intro_text.draw(win)
-
     ppr = (int(pr) / 100)
-
     Text(Point(20, 460), ' 0.0K').draw(win)
     Text(Point(20, 360), ' 2.5K').draw(win)
     Text(Point(20, 260), ' 5.0K').draw(win)
     Text(Point(20, 160), ' 7.5k').draw(win)
     Text(Point(20, 60), '10.0K').draw(win)
-
     draw_border(win)
-
     height = amount * 0.04
     bar = Rectangle(Point(50, 460), Point(90, 460-height))
     bar.setFill("green")
     bar.draw(win)
-
     for year in range(1, 10):
         amount = amount * (1 + ppr)
         xll = year * 50 + 40
@@ -84,10 +69,8 @@ def main():
         bar = Rectangle(Point(xll + 5, 460), Point(xll + 50, 460-height))
         bar.setFill("green")
         bar.draw(win)
-
     conc_box_text = Text(Point(790, 185), "Click the window to close.")
     conc_box_text.draw(win)
-
     win.getMouse()
     win.close()
 
