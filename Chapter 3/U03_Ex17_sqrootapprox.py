@@ -13,19 +13,37 @@
 #
 # Program Description
 #
-# is the apporx of a square root
+# Find the approximation of a square root, using Newtons square root method.
 #
 # Algorithm (pseudocode)
-#
-# find user number
-# input into equation
-# print out input
-#
+# import math
+# print introduction
+# get input of number
+# get input of number of tries
+# store actual sqrt as variable
+# divide input of number by 2 and store as variable
+# for loop making it loop the number of tries
+# make the estimation grow by making it a variable of itself (guess = (guess + (number/guess))/2)
+# subtract exact answer from the estimated one to find the deviation
+# print conclusion
+import math
+
+
 def main():
-    x = int('Enter a perfect square : ')
-    guess = 0
-    while guess**2 < x:
-        guess += 1
-    print('Square root of ' + str(x) + ' is ' + str(guess))
+    print("This program uses Newtons method to compute square roots.")
+
+    number = float(input("What is the number you wish to find the square root of?"))
+    tries = int(input("How many times would you like to use the formula to get closer?"))
+    answer = math.sqrt(number)
+    guess = number/2
+
+    for i in range(tries):
+        guess = (guess + (number/guess))/2
+        deviation = float(answer - guess)
+
+    print(" ")
+    print("The approximation of the square root of", number, "is", str(round(guess, 4)) + ", which")
+    print("is exactly", deviation, "from the actual square root of,", answer,)
+
 
 main()
