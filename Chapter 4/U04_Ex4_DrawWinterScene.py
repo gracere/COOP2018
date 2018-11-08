@@ -13,14 +13,23 @@
 #
 # Program Description
 #
-# This Program draws a winter scene
+# This Program draws a winter scene including a snowman and a background including a tree
 #
 # Algorithm (pseudocode)
 # import graphics
 # set graph points
-# make shapes of tree, and a snowman
-# assign colors to shapes
-# Figure out the points of the shapes
+# make shapes of tree
+#   three triangles
+#       one large, one medium, one small
+# make a trunk for the tree out of rectangle
+# make the background which is a rectangle
+#   add a place/ground out of oval
+# make a snowman
+#       out of three circles
+#           one large, one medium, one small
+# make a face
+#   make nose(triangle), two eyes(circles), and a mouth(oval)
+# make a scarf(polygon)
 #
 from graphics import *
 
