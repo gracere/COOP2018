@@ -17,46 +17,79 @@
 #
 # Algorithm (pseudocode)
 # used code from fun with graphics in class
-#
+# draw five squares, then place them a little bit off of the x axis
+#           in square one, put a circle in middle
+# in square two, put two circles
+# in square three, put three circles
+# in square four, put four circles
+# in square five, put five circles
+# print them
 from graphics import *
 
 
+def draw_die_face(x, y, window):
+    d = Rectangle(Point(x - 1, y + 1), Point(x + 1, y - 1))
+    d.setFill("white")
+    d.setWidth(1 / 4)
+    d.draw(window)
+
+
+def draw_die_hole(x, y, window):
+    c = Circle(Point(x, y), 1 / 8)
+    c.setFill("black")
+    c.draw(window)
+
+
+def draw_die1(x, y, window):
+    draw_die_face(x, y, window)
+    draw_die_hole(x, y, window)
+
+
+def draw_die2(x, y, window):
+    draw_die_face(x, y, window)
+    draw_die_hole(x + 1 / 2, y - 1 / 2, window)
+    draw_die_hole(x - 1 / 2, y + 1 / 2, window)
+
+
+def draw_die3(x, y, window):
+    draw_die_face(x, y, window)
+    draw_die_hole(x, y, window)
+    draw_die_hole(x + 1 / 2, y - 1 / 2, window)
+    draw_die_hole(x - 1 / 2, y + 1 / 2, window)
+
+
+def draw_die4(x, y, window):
+    draw_die2(x, y, window)
+    draw_die_hole(x + 1 / 2, y + 1 / 2, window)
+    draw_die_hole(x - 1 / 2, y - 1 / 2, window)
+
+
+def draw_die5(x, y, window):
+    draw_die4(x, y, window)
+    draw_die_hole(x, y, window)
+
+
 def main():
-    win_width = 1024
-    win_height = 768
-    win = GraphWin("Fun with graphics.py", win_width, win_height)
-    gut_wi = win_width * 0.1
-    gut_hi = win_height * 0.1
-    but_wi = win_width * 0.1
-    but_hi = win_height * 0.1
-    rect1 = Rectangle(Point(gut_wi, gut_hi),
-                      Point(gut_wi + but_wi,
-                            gut_hi + but_hi))
-
-    rect2 = Rectangle(Point(win_width - gut_wi, gut_hi),
-                      Point(win_width - gut_wi - but_wi,
-                            gut_hi + but_hi))
-
-    rect4 = Rectangle(Point(gut_wi,
-                            win_height - gut_hi - but_hi),
-                      Point(gut_wi + but_wi,
-                            win_height - gut_hi))
-
-    rect3 = Rectangle(Point(win_width / 2 - but_wi / 2,
-                            win_height / 2 - but_hi / 2),
-                      Point(win_width / 2 + but_wi / 2,
-                            win_height / 2 + but_hi / 2))
-
-    rect5 = Rectangle(Point(win_width - gut_wi,
-                            win_height - gut_hi - but_hi),
-                      Point(win_width - gut_wi - but_wi,
-                            win_height - gut_hi))
-    rect1.draw(win)
-    rect2.draw(win)
-    rect3.draw(win)
-    rect4.draw(win)
-    rect5.draw(win)
+    win = GraphWin("5 Dice", 600, 600)
+    win.setCoords(0.0, 0.0, 16.0, 16.0)
+    width, height = 16.0, 16.0
+    center = Point(width / 2, height / 2)
+    intro = Text(center, "Click to start:")
+    intro.setSize(19)
+    intro.draw(win)
     win.getMouse()
+    intro.undraw()
+    win.setBackground("purple")
+    draw_die1(2, height / 2, win)
+    draw_die2(5, height / 2, win)
+    draw_die3(8, height / 2, win)
+    draw_die4(11, height / 2, win)
+    draw_die5(14, height / 2, win)
+    end = Text(Point(width / 2, height * 7 / 8), "Click to exit")
+    end.setSize(20)
+    end.draw(win)
+    win.getMouse()
+    win.close()
 
 
 main()
