@@ -30,37 +30,26 @@ def main():
     drawHead(win)
     drawEyes(win)
     drawNose(win)
-    drawMouth()
-    input("Press RETURN to exit.")
+    drawMouth(win)
+    input("press RETURN to exit.")
     win.close()
 
 
 def drawHead(win):
     makeCircle(Point(400, 400), 350, "yellow").draw(win)
 
+
 def drawEyes(win):
-    """
-    make right eye
-    clone right eye
-    move clone to left
-    : return:
-    """
-    rightEye = makeCircle(Point(250, 267), 20, "black")
-    leftEye = rightEye.clone()
-    leftEye.move(300, 0)
-    leftEye.draw(win)
-    rightEye.draw(win)
+    makeCircle(Point(550, 200), 50, "black").draw(win)
+    makeCircle(Point(250, 200), 50, "black").draw(win)
 
 
 def drawNose(win):
-    nose = Circle(center, size * 3)
-    nose.setOutline('yellow')
-    nose.setFill('yellow')
-    nose.draw(win)
+    makeCircle(Point(410, 320), 30, "orange").draw(win)
 
 
-def drawMouth():
-    makeCircle(Point())
+def drawMouth(win):
+    makeCircle(Point(400, 500), 120, "pink").draw(win)
 
 
 main()
