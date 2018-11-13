@@ -17,24 +17,27 @@
 #
 # Algorithm (pseudocode)
 # Print program description
-# find user number
-# input into equation
+# find user number for n
+# input into equation (first number is 1, which is 1+1, and so on)
 # print out input
-#
 
 
 def main():
     print("This is a program for the Fibonacci number for a value you input.")
     n = eval(input("Please insert the value of n:"))
-    if n <= 0:
-        print("Please insert positive integer")
-    for i in range(n):
-        if n == 1:
-            print(1)
-        if n > 1:
-            equation = (n - 1) + (n - 2)
-            print(equation)
-            break
+    sum1 = 1
+    sum2 = 1
+    total = 0
+    if n > 2:
+        for i in range(n - 3):
+            if i % 2 == 0:
+                sum1 = sum1 + sum2
+            else:
+                sum2 = sum2 + sum1
+        total = sum1 + sum2
+        print("The", n, "spot in the sequence is", total)
+    else:
+        print("The", n, "spot in the sequence is 1")
 
 
 main()
