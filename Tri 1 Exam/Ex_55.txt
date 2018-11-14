@@ -1,0 +1,25 @@
+Question 55 Algorithm:
+
+Main:
+# Import math
+# Print introduction
+# ask the user to input a number for (variable a)
+# ask the user to input a number for (variable b)
+# ask the user to input a number for (variable c)
+# ask the user to input a number for (variable n)
+# If false
+#           print "Holy smokes, Fermat was wrong!"(and print that his theory was wrong in this test)
+# If true
+#       print "No, that does not work. Fermat's theory holds."(and print that his theory was right in this test)
+#
+check_fermat:
+# take variables a,b,c,n from input collected from user
+# fermat's theorem: a to the nth power + b to the nth power = c to the nth power
+# plug the users input of variables a, b, c, and n into fermat's theorem
+# create an if n > 2:
+# and create an if n < 2:
+# create an true, false statement,
+# If true
+#       a to the nth power + b to the nth power does not equal c to the nth power,
+# if false
+#       a to the nth power + b to the nth power does equal c to the nth power, and n is greater than 2
