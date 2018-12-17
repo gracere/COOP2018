@@ -45,7 +45,7 @@ def main():
 
     for i in range(years * periods):
         principal += principal * ((1 + (apr / periods))
-        print("The value each successive period is:", principal)
+        print("The value each successive period is:" principal)
 
 
 main()
