@@ -29,7 +29,7 @@
 
 def main():
     print("This program will take your birthday and then it will convert it.")
-    date = input("Enter a date mm/dd/yyyy ")
+    date = input("Enter a date mm/dd/yyyy: ")
     month, day, year = date.split("/")
     print("You where born on", month, "/", day, "/", year)
     months = ("January", "February", "March", "April", "May", "June", "July",
