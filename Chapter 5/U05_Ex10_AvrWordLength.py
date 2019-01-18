@@ -17,9 +17,11 @@
 #
 # Algorithm (pseudocode)
 # Print intro
+# set up all of the letters of the alphabet
 # set the variable for words in a sentence, by splitting the length of the sentence
 # get sentence from user
-# count words and characters with a loop
+# count words with a loop of of the words
+# count characters with a loop of the counting letters
 # print the end result
 
 
