@@ -30,6 +30,9 @@ def main():
                "v", "w", "x", "y", "z"]
     cap = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
                   "U", "V", "W", "X", "Y", "Z"]
+    num = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+    syb = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "[", "{, }", "]", ",", "|", "`", "~",
+           ";", ":","<", ">", ".", "/", "?"]
     total = 0
     count = 0
     lines = 0
@@ -38,9 +41,13 @@ def main():
         for i in range(26):
             low1 = low[i]
             cap1 = cap[i]
+            num1 = num[i]
+            syb1 = syb[i]
             ch = line.count(low1)
             ch1 = line.count(cap1)
-            total = total + ch + ch1
+            ch2 = line.count(num1)
+            ch3 = line.count(syb1)
+            total = total + ch + ch1 + ch2 + ch3
         words = line.split()
         for word in words:
             count = count + 1
