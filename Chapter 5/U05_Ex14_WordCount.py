@@ -26,35 +26,15 @@
 def main():
     file = input("Type the file name you want to word check: ")
     f = open(file, "r")
-    low = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u",
-               "v", "w", "x", "y", "z"]
-    cap = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
-                  "U", "V", "W", "X", "Y", "Z"]
-    num = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
-    syb = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "[", "{, }", "]", ",", "|", "`", "~",
-           ";", ":","<", ">", ".", "/", "?"]
-    spa = [" "]
-    total = 0
-    count = 0
-    lines = 0
-    for line in f:
-        lines = lines+1
-        for i in range(26):
-            low1 = low[i]
-            cap1 = cap[i]
-            num1 = num[i]
-            syb1 = syb[i]
-            spa1 = spa[i]
-            ch = line.count(low1)
-            ch1 = line.count(cap1)
-            ch2 = line.count(num1)
-            ch3 = line.count(syb1)
-            ch4 = line.count(spa1)
-            total = total + ch + ch1 + ch2 + ch3 + ch4
-        words = line.split()
-        for word in words:
-            count = count + 1
-    print("There are {2} lines, {0} characters, and {1} words.".format(total, count, lines))
+    line_count, word_count, character_count = 0, 0, 0
+    for line in f.readlines():
+        for word in (line[:-1].split()):
+            word_count += 1
+            character_count += len(word.strip(""))
+            line_count += 1
+            print("The file {0}.txt has {1} lines, {2} words, and {3} characters.".format(file, line_count, word_count,+
+            character_count))
+            f.close()
 
 
 main()
