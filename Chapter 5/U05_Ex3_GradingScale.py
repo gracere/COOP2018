@@ -28,10 +28,11 @@
 
 def main():
     print("This program will put grades into the A, B, C, D, and F buckets")
-    grade = input("What grade did the student get? (Please write the grade with the capital letter.) ")
-    grades = ("F" * 50, "D" * 60, "C" * 70, "B" * 80, "A" * 90)
-    grade = grades[input(grade) + 1]
-    print("The student got an {0}".format(grade))
+    score = int(input("What grade did the student get? (Please write the grade as a number, must be above 50.) "))
+    exam_score = score // 10
+    letter_grades = "f" * 5 + "DCBAA"
+    letter_score = letter_grades[exam_score - 1]
+    print("The exam score {0} is the letter grade {1}".format(score, letter_score))
 
 
 main()
