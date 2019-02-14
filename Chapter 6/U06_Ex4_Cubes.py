@@ -21,31 +21,29 @@
 # create function sets for sumN, and sumNCubes
 # get the natural number from the user
 # sumN formula is n = n - 1
+# def other two functions
 
 
 def sumN(n):
-    sumN = 0
-    while n > 0:
-        sumN = sumN + n
-        n = n - 1
-        print("The sum of the first natural number is :{0}".format(sumN))
+    nsum = 0
+    for i in range(n):
+        nsum += (i + 1)
+    return nsum
 
 
-def sumNCubes(n):
-    sumNCubes = 0
-    if n == 1:
-        return 1
-    else:
-        while n > 0:
-            sumNCubes = sumNCubes + n
-            (n ** 3) + sumNCubes(n - 1)
-        print("The sum of the cubed first natural number is {0}".format(sumNCubes))
+def sumNcubes(n):
+    cube_sum = 0
+    for i in range(n):
+        cube_sum += (i + 1) ** 3
+    return cube_sum
 
 
 def main():
-    n = int(input("Enter a number: "))
-    sumN(n)
-    sumNCubes(n)
+    print("This program uses two functions to return the sum of the first n natural numbers and sum of the cubes of the"
+          "first n natural numbers with n being user input")
+    n = int(input("Enter how many of the first natural numbers to sum: "))
+    print("The first {0} natural numbers have".format(n) +
+          " a sum of {0} and their cubes sum to {1}.".format(sumN(n), sumNcubes(n)))
 
 
 if __name__ == '__main__':
