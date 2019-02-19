@@ -1,4 +1,4 @@
-# U06_Ex11_SquareEach(nums).py
+# U06_Ex11_squareEach.py
 #
 #  Author: Grace Ritter
 #  Course: Coding for OOP

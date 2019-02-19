@@ -1,4 +1,4 @@
-# U06_Ex12_sumList(nums).py
+# U06_Ex12_sumList.py
 #
 #  Author: Grace Ritter
 #  Course: Coding for OOP

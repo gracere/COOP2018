@@ -1,4 +1,4 @@
-# U06_Ex13_ToNumbers(strList).py
+# U06_Ex13_toNumbers.py
 #
 #  Author: Grace Ritter
 #  Course: Coding for OOP
