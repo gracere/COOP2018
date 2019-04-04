@@ -1,4 +1,4 @@
-# U08_Ex1_SyracuseSeq.py
+# U08_Ex4_SyracuseSeq.py
 #
 #  Author: Grace Ritter
 #  Course: Coding for OOP
@@ -7,7 +7,7 @@
 #     IDE: PyCharm
 #
 # Assignment Info
-#  Exercise: 1
+#  Exercise: 4
 #    Source: Python Programming
 #   Chapter: 8
 #
