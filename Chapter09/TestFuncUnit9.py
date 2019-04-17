@@ -144,12 +144,31 @@ def testmatchOver():
     results.append(runTest('matchOver(0,2,5)', False))
     results.append(runTest('matchOver(0,3,5)', True))
     results.append(runTest('matchOver(1,1,5)', False))
-    results.append(runTest('matchOver(0,0,5)', False))
-    results.append(runTest('matchOver(0,0,5)', False))
-    results.append(runTest('matchOver(0,0,5)', False))
-    results.append(runTest('matchOver(0,0,5)', False))
-    results.append(runTest('matchOver(0,0,5)', False))
-    results.append(runTest('matchOver(0,0,5)', False))
+    results.append(runTest('matchOver(2,2,5)', False))
+    results.append(runTest('matchOver(2,3,5)', True))
+    results.append(runTest('matchOver(3,2,5)', True))
+    results.append(runTest('matchOver(3,4,7)', True))
+    results.append(runTest('matchOver(3,3,7)', False))
+    results.append(runTest('matchOver(3,2,6)', False))
+    results.append(runTest('matchOver(3,3,6)', False))
+    results.append(runTest('matchOver(3,4,6)', True))
+    printResults(results)
+
+def testsimulateOneGame():
+    results = []  # list to hold tests
+
+    # replace   'function(params)' with str version of call to function to test (in quotes);
+    #           'expected results (properly typed)' with expected results (doesn't have to be str;
+    #               should be correct data type)
+    # copy line multiple times to run multiple tests (with different parameters)
+    results.append(runTest('simulateOneGame(0,0)', False))
+    results.append(runTest('simulateOneGame(0,0)', False))
+    results.append(runTest('simulateOneGame(0,0)', False))
+    results.append(runTest('simulateOneGame(0,0)', False))
+    results.append(runTest('simulateOneGame(0,0)', False))
+    results.append(runTest('simulateOneGame(0,0)', False))
+    results.append(runTest('simulateOneGame(0,0)', False))
+    results.append(runTest('simulateOneGame(0,0)', False))
     printResults(results)
 
 
@@ -160,3 +179,6 @@ if __name__ == '__main__':
     # testSphereVolume()
     # testMany()
     testgameOver()
+    testmatchOver()
+    testsimulateOneGame()
+

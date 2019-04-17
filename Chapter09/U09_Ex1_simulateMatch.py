@@ -23,27 +23,26 @@ from math import ceil
 
 
 def main():
-
     intro()
     probA, probB, numMatches, matchGames = getInput()
-    matchesA, matchesB = simulateNMatches(matches, games, probA, probB)
-    summary(matchesA, matchesB, matches, games, probA, probB)
+    matchesA, matchesB = simulateNMatches(numMatches, matchGames, probA, probB)
+    summary(matchesA, matchesB, numMatches, matchGames, probA, probB)
 
 
 def intro():
-
     print('\nThis program simulates N racquetball matches and returns results based off user input')
 
 
 def getInput():
-
-    m = input('\nHow many matches do you wish to simulate?' )
-    g = input('How many games per match?' )
+    m = input('\nHow many matches do you wish to simulate? ')
+    g = 2
+    while g % 2 == 0:
+        g = int(input('How many games per match? (must be odd) '))
     a = input('Probability for player A (greater than 0 and less than 1): ')
     b = input('Probability for player B (greater than 0 and less than 1): ')
-    m = int(m); g = int(g)
-    a = float(a); b= float(b)
-    return m, g, a, b
+    m = int(m)  # ; g = int(g)
+    a = float(a); b = float(b)
+    return a, b, m, g
 
 
 def simulateNMatches(matches, games, probA, probB):
@@ -134,9 +133,9 @@ def matchOver(A, B, G):
     return A == ceil(G / 2) or B == ceil(G / 2)
 
 
-def summary(matchesA, matchesB, matches, games, probA, probB):
+def summary(matchesA, matchesB, numMatches, matchGames, probA, probB):
     print('\nRacketball Simulation\n-------------------------------')
-    print('\nMatches played: {}'.format(games, matches))
+    print('\nMatches played: {}'.format(matchGames, numMatches))
     print('\nProbaility player A wins serve: {}'.format(probA))
     print('\nProbaility player B wins serve: {}'.format(probB))
     print('\nMatches won by player A: {}'.format(matchesA))
@@ -146,3 +145,10 @@ def summary(matchesA, matchesB, matches, games, probA, probB):
 
 if __name__ == '__main__':
     main()
+    # a, b, = simulateOneGame(.9, .3, 'B')
+    # print(a, b)
+    # a, b, = simulateOneMatch(5, .55, .5)
+    # print(a, b)
+    # a, b, = simulateNMatches(10, 5, .55, .5)
+    # print(a, b)
+
