@@ -23,23 +23,28 @@
 # if x is even, x = x/2
 # or if x is odd, x = 3x + 1
 # put user input through the loop until
-#
 
 
 def main():
-    x = int(input("What is the integer starting value number that you want to use?(less than 21): "))
+    x = int(input("What is the integer starting value number that you want to use?: "))
     while syracuse(x) == 1:
         print(x)
 
 
 def syracuse(x):
-    even = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
+    even = (x + 2)
     if x == even:
         x = x / 2
         print(x)
+        for x in range(x == 1):
+            x = x / 2
+            print(x)
     else:
         x = 3 * x + 1
         print(x)
+        for x in range(x == 1):
+            x = 3 * x + 1
+            print(x)
 
 
 if __name__ == '__main__':
