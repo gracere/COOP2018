@@ -27,11 +27,11 @@
 
 def main():
     x = int(input("What is the integer starting value number that you want to use?: "))
-    while syracuse(x) == 1:
+    while Syracuse(x) == 1:
         print(x)
 
 
-def syracuse(x):
+def Syracuse(x):
     even = (x + 2)
     if x == even:
         x = x / 2
